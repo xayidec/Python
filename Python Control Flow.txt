@@ -1,0 +1,33 @@
+Boolean Operators: and
+
+	if (credits >= 120) and (gpa >= 2.0):
+  	print("You meet the requirements to graduate!")
+
+
+Boolean Operators: or
+
+	if credits >= 120 or gpa >= 2.0:
+  	print("You have met at least one of the requirements.")
+
+
+Boolean Operators: not
+	credits = 119
+	if not credits >= 120: 
+  	print("You do not have enough credits to graduate.")
+
+	if not credits >= 120 and not gpa >= 2.0: 
+  	print("You do not meet either requirement to graduate!")
+
+Else: else
+	if (credits >= 120) and (gpa >= 2.0):
+  	print("You meet the requirements to graduate!")
+	else: 
+  	print('something')
+
+Else if: elif
+	if grade >= 90 :
+  		print("A")
+	elif grade >= 80:
+  		print("B")
+	else:
+  		print("F")

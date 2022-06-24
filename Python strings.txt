@@ -1,0 +1,1 @@
+Strings: learn how to slice strings, select specific characters from strings, search strings for characters, iterate through strings, and use strings in conditional statements.

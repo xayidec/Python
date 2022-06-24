@@ -1,0 +1,40 @@
+List:
+	preferred_size = ["Small", "Large", "Medium"]
+==========================================================================================
+Add to list:
+	preferred_size.append("Medium")
+==========================================================================================
+Access list element:
+	preferred_size[1] // this will print "Large"
+
+We can use the index -1 to select the last item of a list,
+	preferred_size[-1] // this will print "Medium"
+==========================================================================================
+Two-Dimensional List:
+	customer_data = [
+  		["Ainsley", "Small", True],
+  		["Ben",	"Large", False],
+  		["Chani", "Medium", True],
+  		["Depak", "Medium", False],
+	]
+==========================================================================================
+Modify value in Normal list:
+	preferred_size[1] = "Extra Large" //this will convert "Large" to "EL"
+==========================================================================================
+Modify value in 2D list:
+	customer_data[2][2] = False //this will convert true to false
+==========================================================================================
+Remove value in 2D list:
+	customer_data[1].remove(False) //this will remove "false" from index 1
+==========================================================================================
+Combine 2 2D lists:
+	customer_data_final = customer_data + [
+  		["Amit", "Large", True], 
+  		["Karim", "X-Large", False]
+	]
+==========================================================================================
+Remove elements:
+	order_list = ["Celery", "Orange Juice", "Orange", "Flatbread"]
+	order_list.remove("Flatbread")
+	print(order_list)
+	

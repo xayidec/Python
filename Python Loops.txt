@@ -1,0 +1,111 @@
+for <temporary variable> in <collection>:
+  <action>
+
+
+Basic for loop:
+	ingredients = ["milk", "sugar", "vanilla extract", "dough", "chocolate"]
+ 
+	for ingredient in ingredients:      | OR |     for i in ingredients:
+  		print(ingredient)			  print(i)
+
+	** REMEMBER to indent - or else we’ll get an IndentationError or unexpected behavior.
+	OR
+	you can write loops in one line: 
+		for ingredient in ingredients: print(ingredient)
+	Note: One-line for loops are useful for simple programs.
+
+
+For Loops: Using Range 
+	 - print out a "Learning Loops!" message six times using a for loop
+
+	for <temporary variable> in <list of length 6>:
+ 		 print("Learning Loops!")
+
+	promise = "I will finish the python loops module!"
+	for i in range(5):
+  		print(promise + str(i + 1))
+	**********************************************************
+	Use a for loop to create a variable i that goes from 0 to len(hairstyles)
+	hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+	for i in range(len(hairstyles)):
+
+
+Combine 2 separate arrays using loop:
+	students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
+	students_period_B = ["Dora", "Minerva", "Alexa", "Obie"]
+
+	for student in students_period_A:
+  		students_period_B.append(student)
+  	print(students_period_B)
+
+Loop Control: Break
+	iterating through the entire list is not a big deal in this case but what if items_on_sale had 1000 items?
+	Thankfully you can stop iteration from inside the loop by using break loop control statement.
+
+	items_on_sale = ["blue shirt", "striped socks", "knit dress", "red headband", "dinosaur onesie"]
+ 
+	print("Checking the sale list!")
+ 
+	for item in items_on_sale:
+  		print(item)
+  		if item == "knit dress":
+    		  break
+ 
+	print("End of search!")
+
+Loop Control: Continue
+	What if we only want to skip the current iteration of the loop?
+
+	ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
+
+	for age in ages:
+  	  if age < 21:
+    	  continue
+
+  	  print(age) // output will be each age that is 21 and under
+
+Nested Loops:
+	sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+	scoops_sold = 0
+
+	for location in sales_data:
+    	  print(location)
+  	  for element in location:
+    		scoops_sold += element
+    
+	print(scoops_sold)
+	
+
+List Comprehensions: 
+	another way we can write elegant loops in our programs using list comprehensions.
+	Using a list comprehension, create a new list called scaled_grades that scales the class grades 
+	add 10 points to all the grades in the list
+	**new_list = [<expression> for <element> in <collection>]
+
+	grades = [90, 88, 62, 76, 74, 89, 48, 57]
+	scaled_grades = [grade + 10 for grade in grades]
+	print(scaled_grades)
+
+List Comprehensions: Conditionals
+	Suppose we wanted to double only our negative numbers
+	
+	numbers = [2, -1, 79, 33, -45]
+	only_negative_doubled = []
+ 
+	for num in numbers:
+  	  if num < 0: 
+    	   only_negative_doubled.append(num * 2)
+ 
+	print(only_negative_doubled) //OUTPUT [-2, -90]
+
+	**Now, here is what our code would look like using a list comprehension:
+	
+	numbers = [2, -1, 79, 33, -45]
+	negative_doubled = [num * 2 for num in numbers if num < 0]
+	print(negative_doubled) //OUTPUT [-2, -90]
+
+	**IF/ELSE condition
+	numbers = [2, -1, 79, 33, -45]
+	doubled = [num * 2 if num < 0 else num * 3 for num in numbers ]
+	print(doubled) //OUTPUT [6, -2, 237, 99, -90]

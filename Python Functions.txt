@@ -1,0 +1,51 @@
+Functions
+	def name_of_function():
+
+
+Function 3 different types:
+	**positional arguments: arguments that can be called by their position in the function definition
+		def calculate_taxi_price(miles_to_travel, rate, discount):
+	** Keyword arguments: where we explicitly refer to what each argument is assigned to in the function call.
+		def calculate_taxi_price(rate=0.5, discount=10, miles_to_travel=100)
+	** Default arguments: arguments that are given default values.
+
+
+2 categoires of functions: 
+	User defined function - functions that are written by users (like us!).
+	Built-in function - come built into Python for us to use.
+		https://docs.python.org/3/library/functions.html
+
+Return - When there is a result from a function that is stored in a variable, it is called a returned function value.
+	Ability to Reuse function output with the return keyword, as well as multiple returns.
+
+	current_budget = 3500.75
+	shirt_expense = 9
+
+	def print_remaining_budget(budget):
+  	    print("Your remaining budget is: $" + str(budget))
+
+	def deduct_expense(budget, expense):
+  	    return budget - expense
+
+	new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
+
+	print_remaining_budget(new_budget_after_shirt)
+	=============================================================================
+	=============================================================================
+	def top_tourist_locations_italy():
+  	   first = "Rome"
+  	   second = "Venice"
+  	   third = "Florence"
+  	   return first, second, third
+
+	most_popular1, most_popular2, most_popular3 = top_tourist_locations_italy()
+
+	print(most_popular1)
+	print(most_popular2)
+	print(most_popular3)
+
+Remove Middle: All elements with an index between the starting and ending index should be removed from the list
+	def remove_middle(lst, start, end):
+   		return lst[:start] + lst[end+1:]
+
+	print(remove_middle([4, 8, 15, 16, 23, 42], 1, 3))

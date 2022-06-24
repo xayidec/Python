@@ -1,0 +1,30 @@
+While Loops:
+require some form of a variable to track the condition of the loop to start and stop.
+
+	//Until countdown is = to 0
+
+	countdown = 10
+	while countdown >= 0:
+  		print(countdown)
+  		countdown -= 1
+	print("We have liftoff!")
+	=============================================
+	=============================================
+	//Until count is = to 3
+
+	count = 0
+	while count <= 3:
+		count += 1
+	print("While Loop ended")
+
+============================================================================================
+While Loop through array/List:
+
+	python_topics = ["variables", "control flow", "loops", "modules", "classes"]
+
+	length = len(python_topics)
+	index = 0
+
+	while index < length:
+  		print("I am learning about " + python_topics[index])
+  		index += 1
